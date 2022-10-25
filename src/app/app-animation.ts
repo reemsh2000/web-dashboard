@@ -5,7 +5,7 @@ import {
   style,
   transition,
   trigger,
-} from '@angular/animations';
+} from '@angular/animations'
 const baseStyles = style({
   // display: 'block',
   position: 'absolute',
@@ -13,7 +13,7 @@ const baseStyles = style({
   left: 0,
   width: '100%',
   height: '100%',
-});
+})
 export const animationArray = [
   trigger('routeAnim', [
     transition(':increment', [
@@ -32,10 +32,10 @@ export const animationArray = [
               style({
                 opacity: 0,
                 transform: 'translateX(-50px)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
 
         query(
@@ -50,10 +50,10 @@ export const animationArray = [
               style({
                 opacity: 1,
                 transform: 'translateX(0)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
       ]),
     ]),
@@ -75,10 +75,10 @@ export const animationArray = [
               style({
                 opacity: 0,
                 transform: 'translateX(50px)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
 
         query(
@@ -93,10 +93,10 @@ export const animationArray = [
               style({
                 opacity: 1,
                 transform: 'translateX(0)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
       ]),
     ]),
@@ -117,10 +117,10 @@ export const animationArray = [
               style({
                 opacity: 0,
                 transform: 'scale(0.8)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
 
         query(
@@ -135,10 +135,10 @@ export const animationArray = [
               style({
                 opacity: 1,
                 transform: 'scale(1)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
       ]),
     ]),
@@ -159,10 +159,10 @@ export const animationArray = [
               style({
                 opacity: 0,
                 transform: 'scale(1.25)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
 
         query(
@@ -177,10 +177,10 @@ export const animationArray = [
               style({
                 opacity: 1,
                 transform: 'scale(1)',
-              })
+              }),
             ),
           ],
-          { optional: true }
+          { optional: true },
         ),
       ]),
     ]),
@@ -192,7 +192,7 @@ export const animationArray = [
         1000,
         style({
           opacity: 0,
-        })
+        }),
       ),
     ]),
   ]),
@@ -204,10 +204,10 @@ export const animationArray = [
         250,
         style({
           opacity: 1,
-        })
+        }),
       ),
     ]),
 
     transition(':leave', [animate(250, style({ opacity: 0 }))]),
   ]),
-];
+]
