@@ -19,28 +19,31 @@
   padding: 50px 0;
 
   h1 {
-    font-size: 120px;
-    font-weight: bold;
-    color: #f5f5f5;
-    text-shadow: 0px 1px 7px rgba(black, 0.1);
+      font-size: 120px;
+      font-weight: bold;
+      color: #f5f5f5;
+      text-shadow: 0px 1px 7px rgba(black, 0.1);
   }
 
   h2 {
-    font-size: 28px;
-    color: white;
-    text-shadow: 0px 1px 4px rgba(black, 0.1);
+      font-size: 28px;
+      color: white;
+      text-shadow: 0px 1px 4px rgba(black, 0.1);
   }
 }
 
 .content-section {
+  // background-color: cadetblue;
   flex-grow: 1;
   min-height: 0;
 }
 
 .bottom-section {
+  // background-color: coral;
   display: flex;
+
   app-tabs {
-    margin: auto;
+      margin: auto;
   }
 }
 
@@ -54,11 +57,11 @@
   color: rgba(white, 0.7);
 
   &:hover {
-    background: rgba(black, 0.3);
-    color: white;
+      background: rgba(black, 0.3);
+      color: white;
   }
 
   &:active {
-    transform: translateY(1px);
+      transform: translateY(1px);
   }
 }
