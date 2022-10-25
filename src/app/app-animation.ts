@@ -23,11 +23,6 @@ export const animationArray = [
       }),
 
       query(':enter, :leave', [baseStyles], { optional: true }),
-
-      // query(':enter', [
-      //   style({ opacity: 0 })
-      // ], { optional: true }),
-
       group([
         query(
           ':leave',
@@ -71,10 +66,6 @@ export const animationArray = [
 
       query(':enter, :leave', [baseStyles], { optional: true }),
 
-      // query(':enter', [
-      //   style({ opacity: 0 })
-      // ], { optional: true }),
-
       group([
         query(
           ':leave',
@@ -113,7 +104,6 @@ export const animationArray = [
     transition('* => secondary', [
       style({
         position: 'relative',
-        // overflow: 'hidden'
       }),
 
       query(':enter, :leave', [baseStyles], { optional: true }),
@@ -156,7 +146,6 @@ export const animationArray = [
     transition('secondary => *', [
       style({
         position: 'relative',
-        // overflow: 'hidden'
       }),
 
       query(':enter, :leave', [baseStyles], { optional: true }),
