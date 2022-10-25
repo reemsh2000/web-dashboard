@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AddBookmarkComponent } from './add-bookmark/add-bookmark.component';
@@ -18,6 +20,21 @@ import { TabsComponent } from './tabs/tabs.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 
+const routes: Routes = [
+  { path: 'bookmarks', component: BookmarksComponent, data: { tab: 1 } },
+  { path: 'bookmarks/add', component: AddBookmarkComponent },
+  {
+    path: 'bookmarks/manage',
+    component: ManageBookmarksComponent,
+    children: [{ path: ':id', component: EditBookmarkComponent }],
+  },
+  { path: 'todos', component: TodosComponent, data: { tab: 2 } },
+  { path: 'todos/add', component: AddTodoComponent },
+  { path: 'todos/:id', component: EditTodoComponent },
+  { path: 'notes', component: NotesComponent, data: { tab: 3 } },
+  { path: 'notes/add', component: AddNoteComponent },
+  { path: 'notes/:id', component: EditNoteComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +53,12 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
     TodosComponent,
     TodoItemComponent,
   ],
-  imports: [BrowserModule, RouterModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
